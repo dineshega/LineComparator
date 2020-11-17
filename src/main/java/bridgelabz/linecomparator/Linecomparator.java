@@ -12,18 +12,25 @@ public class Linecomparator {
 		System.out.println("Enter Line 2 points");
 		double Line2 = LengthofLine();
 		System.out.println("Line1 = " + Line1 + "\nLine2 = " + Line2);
-		Equals(Line1,Line2);
+		compareTo(Line1,Line2);
 	}
 
-	private static void Equals(double line1, double line2) 
+	private static void compareTo(double line1, double line2) 
 	{
-		if(line1 == line2)
-		{
-			System.out.println("Both Lines are equal");
-		}
-		else
-		{
-			System.out.println("Both Lines are not equal ");
+		if (Double.compare(line1, line2) == 0) 
+		{ 
+
+			System.out.println("Both Lines are equal"); 
+		} 
+		else if (Double.compare(line1, line2) < 0)
+		{ 
+
+			System.out.println("Line1 is less than Line2"); 
+		} 
+		else 
+		{ 
+
+			System.out.println("Line1 is greater than Line2"); 
 		}
 	}
 
