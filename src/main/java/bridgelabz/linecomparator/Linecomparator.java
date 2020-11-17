@@ -4,11 +4,27 @@ import java.util.Scanner;
 
 public class Linecomparator {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		System.out.println("Welcome to Line Comparison Computation Program");
 		System.out.println("Enter Line 1 points");
 		double Line1 = LengthofLine();
-		System.out.println("Line1 = " + Line1);
+		System.out.println("Enter Line 2 points");
+		double Line2 = LengthofLine();
+		System.out.println("Line1 = " + Line1 + "\nLine2 = " + Line2);
+		Equals(Line1,Line2);
+	}
+
+	private static void Equals(double line1, double line2) 
+	{
+		if(line1 == line2)
+		{
+			System.out.println("Both Lines are equal");
+		}
+		else
+		{
+			System.out.println("Both Lines are not equal ");
+		}
 	}
 
 	private static double LengthofLine() 
